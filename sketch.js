@@ -17,13 +17,13 @@ function roll() {
 
 function setup() {
 	canvas = createCanvas(600, 400);
-	// Move the canvas so it's inside our <div id="sketch-holder">.
 	canvas.parent('sketch-holder');
 }
 
 function draw() {
 	background(51);
 	ellipseMode(CENTER);
+	angleMode(DEGREES);
 	
 	fill(255);
 	stroke(0);
@@ -34,7 +34,6 @@ function draw() {
 	var list = text_from_user.split('\n');
 	var count = list.length;
 	var r = height/3 + 30;
-	angleMode(DEGREES);
 	
 	// adjusts the text format
 	textAlign(CENTER, CENTER);
@@ -51,14 +50,16 @@ function draw() {
 		var y = -r * sin(angle) + height / 2;
 		var s = list[i];
 		
-		// print the choices
 		strokeWeight(1);
+		// print the choices
 		text(s, x - 30, y, 60, 30);
 		
 		// draws the lines to separate the circle
 		if (count > 1) {
 			x = r * cos(angle + (180/count)) + width / 2;
 			y = -r * sin(angle + (180/count)) + height / 2;
+			
+			strokeWeight(1);
 			line(width/2, height/2, x, y);
 		}
 		
