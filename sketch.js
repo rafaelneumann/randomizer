@@ -52,14 +52,13 @@ function draw() {
 		var s = list[i];
 		
 		// print the choices
+		strokeWeight(1);
 		text(s, x - 30, y, 60, 30);
 		
 		// draws the lines to separate the circle
 		if (count > 1) {
 			x = r * cos(angle + (180/count)) + width / 2;
 			y = -r * sin(angle + (180/count)) + height / 2;
-			
-			strokeWeight(1);
 			line(width/2, height/2, x, y);
 		}
 		
