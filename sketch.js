@@ -38,7 +38,7 @@ function draw() {
 	
 	// adjusts the text format
 	textAlign(CENTER, CENTER);
-	textSize(12);
+	textSize(18);
 	fill(190);
 	
 	// start angle
