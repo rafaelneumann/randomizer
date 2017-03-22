@@ -17,6 +17,7 @@ function roll() {
 
 function setup() {
 	canvas = createCanvas(600, 400);
+	// Move the canvas so it's inside our <div id="sketch-holder">.
 	canvas.parent('sketch-holder');
 }
 
@@ -50,9 +51,9 @@ function draw() {
 		var y = -r * sin(angle) + height / 2;
 		var s = list[i];
 		
-		strokeWeight(1);
 		// print the choices
-		text(s, x - 30, y, 60, 30);
+		strokeWeight(1);
+		text(s, x - 50, y, 100, 50);
 		
 		// draws the lines to separate the circle
 		if (count > 1) {
