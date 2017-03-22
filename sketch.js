@@ -53,7 +53,7 @@ function draw() {
 		
 		// print the choices
 		strokeWeight(1);
-		text(s, x - 50, y, 100, 50);
+		text(s, x - 50, y - 25, 100, 50);
 		
 		// draws the lines to separate the circle
 		if (count > 1) {
