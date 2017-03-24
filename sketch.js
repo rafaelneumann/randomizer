@@ -47,6 +47,7 @@ function draw() {
 	// draw the circle
 	for (var i = 0; i < list.length; i++) {
 		// position and choice text
+		stroke(0);
 		var x = r * cos(angle) + width / 2;
 		var y = -r * sin(angle) + height / 2;
 		var s = list[i];
@@ -61,6 +62,7 @@ function draw() {
 			y = -r * sin(angle + (180/count)) + height / 2;
 			
 			strokeWeight(1);
+			stroke(0);
 			line(width/2, height/2, x, y);
 		}
 		
@@ -72,6 +74,7 @@ function draw() {
 	var x = r * cos(choosing_angle) + width / 2;
 	var y = -r * sin(choosing_angle) + height / 2;
 	strokeWeight(10);
+	stroke(156, 210);
 	line(width/2, height/2, x, y);
 	
 	// updates the velocity
